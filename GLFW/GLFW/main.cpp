@@ -1,10 +1,10 @@
 #include "Shader.h"
 #include <iostream>
-#include <GLFW/glfw3.h>
-#include <SOIL/SOIL.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
+#include <GLFW\glfw3.h>
+#include <SOIL\SOIL.h>
+#include <glm\glm.hpp>
+#include <glm\gtc\matrix_transform.hpp>
+#include <glm\gtc\type_ptr.hpp>
 
 // Function prototypes
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -20,7 +20,8 @@ float u_fOppacitySmiley = .5f;
 int main()
 {
 	// Init GLFW
-	glfwInit();
+	if (!glfwInit())
+		return -1;
 
 	// Set all the required options for GLFW
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
